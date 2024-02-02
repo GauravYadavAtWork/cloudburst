@@ -1,23 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { createBrowserRouter,RouterProvider,} from "react-router-dom";
+import Homepage from "./homepage/Homepage";
+import AboutPage from "./aboutpage/Aboutpage";
+import ContactPage from "./contactpage/Contact";
+import MultipleLRegression from "./multipleLinearRegression/MultipleLRegression";
+import PolyRegression from "./polynomialregression/PolyRegression";
+import Svr from "./SVR/svr";
+import RandomForestRegression from "./randomforest/randomforest";
+import DecisionTreeRegression from "./decisiontreeRegression/DecisionTRegression";
+import Logisticregression from "./logisticregression/logisticregression";
+import RandomForestClassifier from "./randomforestclassifier/rfc";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Homepage/>,
+  },
+  {
+    path:"/About",
+    element:<AboutPage/>
+  },
+  {
+    path:"/Contact",
+    element:<ContactPage/>
+  },
+  {
+    path:"/MultipleLinearRegression",
+    element:<MultipleLRegression/>
+  },
+  {
+    path:"/PolynomialRegression",
+    element:<PolyRegression/>
+  },
+  {
+    path:'/SupportVectorRegression',
+    element:<Svr/>
+  },
+  {
+    path:'/RandomForestRegression',
+    element:<RandomForestRegression/>
+  },
+  {
+    path:'/DecisionTreeRegression',
+    element:<DecisionTreeRegression/>
+  },
+  {
+    path:'/LogisticRegression',
+    element:<Logisticregression/>
+  },
+  {
+    path:'/RandomForestClassifier',
+    element:<RandomForestClassifier/>
+  }
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -1,0 +1,75 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.brandname{
+    font-size: 26px;
+    padding: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .brandname {
+        font-size: 20px;
+    }
+}
+
+.hamicon{
+    border: 0.1px solid rgba(255, 255, 255, 0.221);
+    border-radius: 6px;
+    padding: 10px;
+    padding-bottom: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.hamimage{
+    height: 35px;
+}
+
+body.offcanvas {
+    overflow: hidden;
+}
+
+.offcanvas {
+    position: fixed;
+    top: 0;
+    left: -450px;
+    width: 450px;
+    height: 110%; 
+    background: #0f0f0f;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 600px) {
+    .offcanvas {
+        left: -280px;
+        width: 280px;
+    }
+}
+
+.offcanvas.open {
+    left: 0;
+}
+
+.offcanvaslink{
+    border: 0.1px solid rgba(255, 255, 255, 0.221);
+    border-radius: 6px;
+    padding: 8px;
+    width: 75%;
+    margin: 15px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.offcanvaslink:hover{
+    background-color: #1d1c1c;
+}
+
+.link{
+    text-decoration: none;
+}

@@ -1,0 +1,132 @@
+/* predictcontainer.css */
+
+.predictcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: white;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+  
+  .box {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: black;
+  }
+  
+  .left {
+    flex: 1;
+    padding-right: 10px;
+  }
+  
+  .middle {
+    flex: 1;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right {
+    flex: 1;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .buttonp {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 70%;
+  }
+  
+
+  .buttondiv{
+    text-align: center;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+  
+/* Additional styling for the Predicted Results */
+  .predicted-results {
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+
+  .predprec{
+    font-size: 80px;
+  }
+
+/* End of predictcontainer.css */
+  
+
+@media screen and (max-width: 667px) {
+  .predictcontainer {
+    flex-direction: column;
+  }
+  .box {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: black;
+    flex-direction: column;
+  }
+  
+  .left {
+    flex: 1;
+    padding-right: 10px;
+  }
+  
+  .middle {
+    flex: 1;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right {
+    flex: 1;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+  }
+  .predicted-results {
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+
+  .predprec{
+    font-size: 50px;
+  }
+}
